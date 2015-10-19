@@ -1,0 +1,24 @@
+﻿git init                 初始化Git仓库
+git add<file>            添加修改
+git commit [-m/am/..]    提交修改
+git status               查看工作区状态
+git diff                 查看修改内容
+git log                  查看提交历史
+git log --pretty=oneline 单行显示
+git reflog               查看命令历史，以便确定要到哪个版本
+git reset --hard HEAD^   回退到上一个版本
+git reset --hard         版本号前几位，
+cat file                 (查看（文本）文件内容)
+git diff HEAD -- file.txt查看工作区与版本库里面最新版本的区别
+git checkout -- file     直接丢弃工作区的修改
+当修改添加到暂存区时，第一步用命令git reset HEAD file，就回到了场景上步，第二步按上步操作。
+当提交到了版本库时：git reset --hard HEAD^ 
+git rm  删除文件
+
+
+git remote add origin (github上的仓库地址，建议用ssh)
+git push -u origin master 第一次推送master分支上的所有内容
+此后，直接用 git push origin master
+
+warning: LF will be replaced by CRLF in XXXXXXXXXXXXXX. 解决方法：
+执行  git config core.autocrlf false 
